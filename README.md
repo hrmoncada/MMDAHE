@@ -63,7 +63,7 @@ We can have the set up a simple graph representation, which looks like
 | 6:     | [3, 7]      |     19           |
 | 7:     | [4, 6, 8]   |     22           |
 | 8:     | [5, 7]      |     24           |
-
+Using the table above we can buid the data set:
 ```sh
 8 12
 1 3
