@@ -4,10 +4,11 @@
 **"METIS is a set of serial programs for partitioning graphs, partitioning finite element meshes, and producing fill reducing orderings for sparse matrices. The algorithms implemented in METIS are based on the multilevel recursive-bisection, multilevel k-way, and multi-constraint partitioning schemes developed in our lab."** [Link to METIS](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview)
 
 An example of an unweighted graph stored in the METIS graph file format.
-> 0---1---2
-> |   |   |
-> 3---4---5
-
+```sh
+0---1---2
+|   |   |
+3---4---5
+```
 | Vertex |  Edges   | Number of Edges  |  
 | ------ | ------ |------ |
 |  0:    |   1 3    |      2           |
