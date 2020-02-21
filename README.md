@@ -11,14 +11,14 @@ An example of an unweighted graph stored in the METIS graph file format.
 3---4---5
 ```
 
-| Vertex |  Vertices | Number of Edges  |  
-| ------ |   ------  |     ------       |
-|  0:    |   1, 3    |      2           |
-|  1:    |   0, 4, 2 |      5           |
-|  2:    |   1, 5    |      7           |
-|  3:    |   0, 4    |      9           |
-|  4:    |   3, 1, 5 |      12          |
-|  5:    |   4, 2    |      14          |  
+| Vertex |  Vertices   | Number of Edges  |  
+| ------ |   ------    |     ------       |
+|  0:    |   [1, 3]    |      2           |
+|  1:    |   [0, 4, 2] |      5           |
+|  2:    |   [1, 5]    |      7           |
+|  3:    |   [0, 4]    |      9           |
+|  4:    |   [3, 1, 5] |      12          |
+|  5:    |   [4, 2]    |      14          |  
 
 Using the table above we can buid the data set: 
 ```sh
@@ -41,24 +41,24 @@ The mandatory parameters are:
 - adjncy (the compressed adjacent list).
 
 Give a a directed graph based on the following structure:
-
+```sh
 0---1---2
 |   |   |
 3---4---5
 |   |   |
 6---7---8
-
+```
 We can have the set up a simple graph representation, which looks like
 
-| Vertex |  Vertices | Number of Edges  |  
-| ------ |   ------  |     ------       |
-  0:     | [1, 3],   |     2    |
-| 1:     | [0, 2, 4],|     5  |
-| 2:     | [1, 5],   |     7    |
-| 3:     | [0, 4, 6],|     10    |
-| 4:     | [1, 3, 5, 7],|  14     |
-| 5:     | [2, 4, 8],|     17   |
-| 6:     | [3, 7],   |     19     |
-| 7:     | [4, 6, 8],|     22        |
-| 8:     | [5, 7],   |     24       |
+| Vertex |  Vertices   | Number of Edges  |  
+| ------ |   ------    |     ------       |
+  0:     | [1, 3]      |     2            |
+| 1:     | [0, 2, 4]   |     5            |
+| 2:     | [1, 5]      |     7            |
+| 3:     | [0, 4, 6]   |     10           |
+| 4:     | [1, 3, 5, 7]|     14           |
+| 5:     | [2, 4, 8]   |     17           |
+| 6:     | [3, 7]      |     19           |
+| 7:     | [4, 6, 8]   |     22           |
+| 8:     | [5, 7]      |     24           |
 
