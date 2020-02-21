@@ -20,7 +20,7 @@ Example 1: An unweighted graph stored in the METIS graph file format.
 |  4:    |   [3, 1, 5] |      12          |
 |  5:    |   [4, 2]    |      14          |  
 
-Using the table above we can buid the data set: 
+Using the table above we can build the data set: 
 ```sh
 6 7
 1 3
@@ -63,7 +63,7 @@ We can have the set up a simple graph representation, which looks like
 | 6:     | [3, 7]      |     19           |
 | 7:     | [4, 6, 8]   |     22           |
 | 8:     | [5, 7]      |     24           |
-Using the table above we can buid the data set:
+Using the table above we can build the data set:
 ```sh
 8 12
 1 3
