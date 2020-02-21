@@ -1,5 +1,5 @@
-# MMPDAHE
-## Metis Mesh Partition Descomposion Across Hardware Elements
+# MMDAHE
+## Metis Mesh Descomposion Across Hardware Elements
 
 **"METIS is a set of serial programs for partitioning graphs, partitioning finite element meshes, and producing fill reducing orderings for sparse matrices. The algorithms implemented in METIS are based on the multilevel recursive-bisection, multilevel k-way, and multi-constraint partitioning schemes developed in our lab."** [Link to METIS](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview)
 
