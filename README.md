@@ -11,7 +11,7 @@ An example of an unweighted graph stored in the METIS graph file format.
 3---4---5
 ```
 
-| Vertex |  Edges    | Number of Edges  |  
+| Vertex |  Vertices | Number of Edges  |  
 | ------ |   ------  |     ------       |
 |  0:    |   1, 3    |      2           |
 |  1:    |   0, 4, 2 |      5           |
@@ -20,7 +20,7 @@ An example of an unweighted graph stored in the METIS graph file format.
 |  4:    |   3, 1, 5 |      12          |
 |  5:    |   4, 2    |      14          |  
 
-The data set 
+Using the table above we can buid the data set: 
 ```sh
 6 7
 1 3
@@ -31,9 +31,9 @@ The data set
 4 2
 ```
 -The first line lists  the number of vertices (6) and edges (7).
--The secon line refer to vertex 0 is connected to vertices 1 and 3.
--The subsequent lines list the vertex's neighbors of successive vertices.
--Notice that each edge is listed twice. There are 7 edges, but 14 edge entries.
+-The second line refer to vertex (0), list the connected vertices (1) and (3).
+-The subsequent lines list the vertex's neighbors of successive connected vertices.
+-Notice that each edge is listed twice. There are (7) edges, but (14) edge entries.
 
 The mandatory parameters are:
 - nparts (number of partitions), 
@@ -50,14 +50,15 @@ Give a a directed graph based on the following structure:
 
 We can have the set up a simple graph representation, which looks like
 
->>> graph = {
-...    0: [1, 3],
-...    1: [0, 2, 4],
-...    2: [1, 5],
-...    3: [0, 4, 6],
-...    4: [1, 3, 5, 7],
-...    5: [2, 4, 8],
-...    6: [3, 7],
-...    7: [4, 6, 8],
-...    8: [5, 7],
-... }
+| Vertex |  Vertices | Number of Edges  |  
+| ------ |   ------  |     ------       |
+  0:     | [1, 3],   |     2    |
+| 1:     | [0, 2, 4],|     5  |
+| 2:     | [1, 5],   |     7    |
+| 3:     | [0, 4, 6],|     10    |
+| 4:     | [1, 3, 5, 7],|  14     |
+| 5:     | [2, 4, 8],|     17   |
+| 6:     | [3, 7],   |     19     |
+| 7:     | [4, 6, 8],|     22        |
+| 8:     | [5, 7],   |     24       |
+
