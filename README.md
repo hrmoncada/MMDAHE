@@ -42,7 +42,7 @@ The mandatory parameters are:
 - adjncy (the compressed adjacent list), 
   adjncy = [1,3,0,4,2,1,5,0,4,3,1,5,4,2]
 
-Fpr example2 : Give a a directed graph based on the following structure:
+Example 2 : Give a a directed graph based on the following structure:
 ```sh
 0---1---2
 |   |   |
