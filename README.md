@@ -4,29 +4,41 @@
 **"METIS is a set of serial programs for partitioning graphs, partitioning finite element meshes, and producing fill reducing orderings for sparse matrices. The algorithms implemented in METIS are based on the multilevel recursive-bisection, multilevel k-way, and multi-constraint partitioning schemes developed in our lab."** [Link to METIS](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview)
 
 An example of an unweighted graph stored in the METIS graph file format.
+
 ```sh
 0---1---2
 |   |   |
 3---4---5
 ```
-| Vertex |  Edges   | Number of Edges  |  
-| ------ | ------ |------ |
-|  0:    |   1 3    |      2           |
-|  1:    |   0 4 2  |      5           |
-|  2:    |   1 5    |      7           |
-|  3:    |   0 4    |      9           |
-|  4:    |   3 1 5  |      12          |
-|  5:    |   4 2    |      14          |    
 
-The first non-comment line lists  the number of vertices (6) and edges (7).
+| Vertex |  Edges    | Number of Edges  |  
+| ------ |   ------  |     ------       |
+|  0:    |   1, 3    |      2           |
+|  1:    |   0, 4, 2 |      5           |
+|  2:    |   1, 5    |      7           |
+|  3:    |   0, 4    |      9           |
+|  4:    |   3, 1, 5 |      12          |
+|  5:    |   4, 2    |      14          |  
 
-The next line notes that vertex 1 is connected to vertices 5, 3 and 2.
-Subsequent lines list the neighbors of successive vertices.
+The data set 
+```sh
+6 7
+1 3
+0 4 2
+1 5
+0 4
+3 1 5
+4 2
+```
+-The first line lists  the number of vertices (6) and edges (7).
+-The secon line refer to vertex 0 is connected to vertices 1 and 3.
+-The subsequent lines list the vertex's neighbors of successive vertices.
+-Notice that each edge is listed twice. There are 7 edges, but 14 edge entries.
 
-Notice that each edge is listed twice.  There are 11 edges, but 22 edge entries.
-
-The mandatory parameters are nparts (number of partitions), xadj (the starting positions of adjacent list) and 
-adjncy (the compressed adjacent list).
+The mandatory parameters are:
+- nparts (number of partitions), 
+- xadj (the starting positions of adjacent list),
+- adjncy (the compressed adjacent list).
 
 Give a a directed graph based on the following structure:
 
