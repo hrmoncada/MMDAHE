@@ -37,9 +37,9 @@ Using the table above we can buid the data set:
 
 The mandatory parameters are:
 - nparts (number of partitions), 
-- xadj (the starting positions of adjacent list),
+- xadj (the starting positions of adjacent list), 
   xadj = [0, 2, 5, 7, 9, 12, 14]
-- adjncy (the compressed adjacent list).
+- adjncy (the compressed adjacent list), 
   adjncy = [1,3,0,4,2,1,5,0,4,3,1,5,4,2]
 
 Fpr example2 : Give a a directed graph based on the following structure:
@@ -78,7 +78,7 @@ We can have the set up a simple graph representation, which looks like
 ```
 The mandatory parameters are:
 - nparts (number of partitions), 
-- xadj (the starting positions of adjacent list),
+- xadj (the starting positions of adjacent list), 
   xadj = [0, 2, 5, 7, 10, 14, 17, 19, 22, 24]
-- adjncy (the compressed adjacent list).
+- adjncy (the compressed adjacent list), 
   adjncy = [1, 3, 0, 2, 4, 1, 5, 0, 4, 6, 1, 3, 5, 7, 2, 4, 8, 3, 7, 4, 6 ,8, 5, 7]
