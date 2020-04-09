@@ -82,3 +82,37 @@ The mandatory parameters are:
   xadj = [0, 2, 5, 7, 10, 14, 17, 19, 22, 24]
 - adjncy (the compressed adjacent list), 
   adjncy = [1, 3, 0, 2, 4, 1, 5, 0, 4, 6, 1, 3, 5, 7, 2, 4, 8, 3, 7, 4, 6 ,8, 5, 7]
+    
+## ParMETIS_V3_PartKway testsParMETIS_V3_PartKway.
+Discussion: The graph has the following form:
+```sh
+      0 --- 1 --- 2 --- 3
+      |     |     |     |
+      4 --- 5 --- 6 ----7
+  ```
+  ```
+         adjncy[] xadj[]     xadj[]    
+-----------------------------------       
+vertex : n+1  10                       rank
+-----------------------------------
+      0: 1 4        2            2       0
+      1: 0 2 5      5            5
+-----------------------------------      
+      2: 1 3 6      8            3       1
+      3: 2 7       10            5
+-----------------------------------       
+      4: 0 5       12            2       2
+      5: 1 4 6     15            5      
+-----------------------------------       
+      6: 2 5 7     18            3       3
+ n =  7: 3 6       20 => 20/2    5
+-----------------------------------  
+   rank                               vtxdist[]
+                                           0  
+ process 0 , get vertices 0 throught 1  |  2
+ process 1 , get vertices 0 throught 3  |  4
+ process 2 , get vertices 0 throught 5  |  6
+ process 3 , get vertices 0 throught 7  |  8
+ ```
+ 
+  
